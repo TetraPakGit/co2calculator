@@ -1,0 +1,146 @@
+﻿* {
+    font-family: Helvetica, Arial;
+}
+
+body {
+    background: #333;
+}
+
+#content {
+    margin: auto;
+    width: 960px;
+}
+
+#content .container {
+    float: left;
+    width: 100%;
+    background: #ddd;
+}
+
+#content .container .ip {
+    float: left;
+    width: 100%;
+    margin: 20px;
+}
+
+
+.topmenu a {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #000000;
+    margin: 5px;
+    border: 1px solid #333;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.grad, .topmenu a {
+    background-image: linear-gradient(bottom, rgb(181,181,181) 2%, rgb(230,230,230) 51%);
+    background-image: -o-linear-gradient(bottom, rgb(181,181,181) 2%, rgb(230,230,230) 51%);
+    background-image: -moz-linear-gradient(bottom, rgb(181,181,181) 2%, rgb(230,230,230) 51%);
+    background-image: -webkit-linear-gradient(bottom, rgb(181,181,181) 2%, rgb(230,230,230) 51%);
+    background-image: -ms-linear-gradient(bottom, rgb(181,181,181) 2%, rgb(230,230,230) 51%);
+
+    background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.02, rgb(181,181,181)),
+	    color-stop(0.51, rgb(230,230,230))
+    );
+}
+
+.translationseditor textarea {
+    padding: 0px;
+    height: 150px;
+    width: 880px;
+}
+
+.translationseditor input[type=submit] {
+    width: 80px;
+    height: 40px;
+}
+
+.translationseditor {
+    float: left;
+    width: 880px;
+    margin: 40px 20px;
+}
+
+.translationseditor .row {
+    float: left;
+    width: 100%;
+}
+
+.translationseditor .row span {
+    display: inline-block;
+    width: 150px;
+    min-width: 150px;
+}
+
+.translationseditor .row label {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.translations, .products {
+    float: left;
+    width: 880px;
+    padding: 0px;
+    margin: 20px;
+}
+
+
+table.dataTable td {
+    font-size: 12px;
+    padding: 3px 5px;
+}
+
+#productseditor {
+}
+
+#productseditor label {
+    display: inline-block;
+    width: 250px;
+}
+
+#productseditor input[type=text] {
+    width: 250px;
+    break-after: always;
+}
+
+#productseditor button {
+    width: 90px;
+    height: 50px;
+}
+
+.uploadsection {
+    float: left;
+}
+
+.uploadsection img {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.uploadsection div.images div {
+    max-width: 150px;
+    float: left;
+    height: 90px;
+    margin: 20px;
+}
+
+.uploadsection div span {
+    font-size: 11px;
+    display: inline-block;
+    width: 100%;
+}
+
+.uploadsection .admin {
+    float: left;
+    background: #eee;
+    width: 880px;
+    padding: 20px 20px;
+}

@@ -1,0 +1,84 @@
+
+
+
+
+@font-face {
+    font-family: 'avenir_tplight';
+    src: url('avenirtp-light-web.eot');
+    src: url('avenirtp-light-web.eot?#iefix') format('embedded-opentype'),
+         url('avenirtp-light-web.woff') format('woff'),
+         url('avenirtp-light-web.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'avenir_tplight_oblique';
+    src: url('avenirtp-lightoblique-web.eot');
+    src: url('avenirtp-lightoblique-web.eot?#iefix') format('embedded-opentype'),
+         url('avenirtp-lightoblique-web.woff') format('woff'),
+         url('avenirtp-lightoblique-web.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'avenir_tpmedium';
+    src: url('avenirtp-medium-web.eot');
+    src: url('avenirtp-medium-web.eot?#iefix') format('embedded-opentype'),
+         url('avenirtp-medium-web.woff') format('woff'),
+         url('avenirtp-medium-web.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'avenir_tpmedium_oblique';
+    src: url('avenirtp-mediumoblique-web.eot');
+    src: url('avenirtp-mediumoblique-web.eot?#iefix') format('embedded-opentype'),
+         url('avenirtp-mediumoblique-web.woff') format('woff'),
+         url('avenirtp-mediumoblique-web.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'avenir_tpblack';
+    src: url('avenirtp-black-web.eot');
+    src: url('avenirtp-black-web.eot?#iefix') format('embedded-opentype'),
+         url('avenirtp-black-web.woff') format('woff'),
+         url('avenirtp-black-web.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'avenir_tpblack_oblique';
+    src: url('avenirtp-blackoblique-web.eot');
+    src: url('avenirtp-blackoblique-web.eot?#iefix') format('embedded-opentype'),
+         url('avenirtp-blackoblique-web.woff') format('woff'),
+         url('avenirtp-blackoblique-web.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}

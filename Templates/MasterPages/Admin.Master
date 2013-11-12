@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="CO2Web.Templates.MasterPages.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="/Content/DataTables-1.9.4/media/css/jquery.dataTables.css" type="text/css" rel="stylesheet" />
+    <link href="/Content/admin.css" type="text/css" rel="stylesheet" />
+    <link href="/scripts/fancybox/jquery.fancybox.css" type="text/css" rel="stylesheet" />
+    <link href="/templates/pages/Styles/css/bootstrap.css" rel="stylesheet" />
+    <script type="text/javascript" src="/scripts/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="/scripts/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="/scripts/DataTables-1.9.4/media/js/jquery.datatables.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.jeditable.mini.js"></script>
+    <script type="text/javascript" src="/scripts/admin.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="scriptmanager" runat="server"></asp:ScriptManager>
+        <div id="content">
+            <div class="container">
+                <div class="ip">
+                <div class="topmenu">
+                    <a href="Translations.aspx">Labels</a> <a href="Upload.aspx">Images</a> <a href="Products.aspx">Produkter</a>
+                </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

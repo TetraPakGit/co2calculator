@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ProductsDelete.aspx.cs" Inherits="CO2Web.Templates.Pages.Admin.ProductsDelete" %>

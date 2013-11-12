@@ -1,0 +1,10 @@
+﻿.container, 
+.navbar-static-top .container, 
+.navbar-fixed-top .container, 
+.navbar-fixed-bottom .container, 
+.span12 {
+    width: 900px;
+}
+.ie8Comp .flexslider#carousel {
+    margin-top:-75px;
+}

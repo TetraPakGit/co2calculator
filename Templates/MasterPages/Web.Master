@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Web.master.cs" Inherits="CO2Web.Templates.MasterPages.Web" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Tetra Pac C02 Calculator</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+    <!--
+    <script type="text/javascript" src="/scripts/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="/scripts/co2.js"></script>
+    -->
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="/Templates/Styles/js/jquery.cookie.js"></script>
+    <script src="/Templates/Styles/js/jquery.columnizer.js"></script>
+    <!-- /jQuery -->
+
+    <!-- Bootstrap -->
+    <script src="/Templates/Styles/js/bootstrap.min.js"></script>
+	<link href="/Templates/Styles/css/bootstrap.css" rel="stylesheet" media="all"/>
+	<!-- /Bootstrap -->
+    
+    <!-- flexslider -->
+    <script src="/Templates/Styles/flexslider/jquery.flexslider.js" defer></script>
+    <script src="/Templates/Styles/flexslider/jquery.easing.js"></script>
+    <script src="/Templates/Styles/flexslider/jquery.mousewheel.js"></script>
+    <link rel="stylesheet" href="/Templates/Styles/flexslider/flexslider.css" type="text/css" media="all" />
+    <!-- /flexslider -->
+
+    <!-- co2 -->
+    <script src="/Templates/Styles/js/co2.js"></script>
+    <link href="/Templates/Styles/fonts/stylesheet.css" rel="stylesheet" media="all"/>
+    <link href="/Templates/Styles/css/co2.css" rel="stylesheet" media="all"/>
+    <!-- /co2 -->
+
+    <!--[if lt IE 9]>
+	    <link href="/Templates/Styles/css/oldie.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="site">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
