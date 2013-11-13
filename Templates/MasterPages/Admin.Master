@@ -23,9 +23,11 @@
         <div id="content">
             <div class="container">
                 <div class="ip">
+                <% if (Page.User.Identity.IsAuthenticated) { %>
                 <div class="topmenu">
                     <a href="Translations.aspx">Labels</a> <a href="Upload.aspx">Images</a> <a href="Products.aspx">Produkter</a>
                 </div>
+                <% } %>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
             </asp:ContentPlaceHolder>

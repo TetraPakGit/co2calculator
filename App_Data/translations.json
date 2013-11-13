@@ -13,6 +13,14 @@
       {
         "Key": "WrongPassword",
         "Value": "Wrong password or username"
+      },
+      {
+        "Key": "Username",
+        "Value": "Missing: Login/Username"
+      },
+      {
+        "Key": "Wrong password",
+        "Value": "Missing: Login/Wrong password"
       }
     ]
   },

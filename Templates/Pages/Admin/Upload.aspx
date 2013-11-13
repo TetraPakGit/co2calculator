@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="uploadsection">
-        <h2>Upload image (600x400)</h2>
+        <h2>Upload image (650x450)</h2>
         <div class="images">
             <asp:PlaceHolder ID="pcImage" runat="server" />
         </div>
@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="uploadsection">
-        <h2>Upload thumb image (150x150)</h2>
+        <h2>Upload thumb image (150x113)</h2>
         <div class="images">
             <asp:PlaceHolder ID="pcThumbs" runat="server" />
         </div>
