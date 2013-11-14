@@ -8,7 +8,7 @@
             <%= Translate("Username", "Login") %>
             <asp:TextBox ID="UsernameTextBox" runat="server"></asp:TextBox>
             <%= Translate("Password", "Login") %>
-            <asp:TextBox ID="PasswordTextBox" runat="server"></asp:TextBox>
+            <asp:TextBox ID="PasswordTextBox" TextMode="Password" runat="server"></asp:TextBox>
             <asp:Button ID="LoginButton" runat="server" OnClick="LoginButton_Click" />
             <asp:Literal ID="WrongPasswordLiteral" runat="server"></asp:Literal>
         </asp:PlaceHolder>    
