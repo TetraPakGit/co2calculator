@@ -16,11 +16,11 @@
       },
       {
         "Key": "Username",
-        "Value": "Missing: Login/Username"
+        "Value": "Username"
       },
       {
         "Key": "Wrong password",
-        "Value": "Missing: Login/Wrong password"
+        "Value": "Wrong password"
       }
     ]
   },

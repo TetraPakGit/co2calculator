@@ -8,6 +8,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <TimeStampOfAssociatedLegacyPublishXmlFile />
   </PropertyGroup>
   <ItemGroup>
+    <File Include="App_Data/aspnet-CO2Web-20130823140620.mdf">
+      <publishTime>11/12/2013 11:24:37</publishTime>
+    </File>
+    <File Include="App_Data/aspnet-CO2Web-20130823140620_log.ldf">
+      <publishTime>11/12/2013 11:24:37</publishTime>
+    </File>
     <File Include="App_Data/data.json">
       <publishTime>09/03/2013 10:05:46</publishTime>
     </File>
@@ -21,7 +27,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/13/2013 09:28:05</publishTime>
     </File>
     <File Include="App_Data/translations.json">
-      <publishTime>10/21/2013 12:11:07</publishTime>
+      <publishTime>11/14/2013 10:10:00</publishTime>
     </File>
     <File Include="App_Start/BundleConfig.cs">
       <publishTime>08/27/2013 13:06:37</publishTime>
@@ -30,10 +36,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/27/2013 13:06:42</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>11/11/2013 16:19:49</publishTime>
+      <publishTime>11/14/2013 10:10:43</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>11/11/2013 16:19:49</publishTime>
+      <publishTime>11/14/2013 10:10:43</publishTime>
     </File>
     <File Include="bin/AspNet.ScriptManager.jQuery.dll">
       <publishTime>08/28/2013 16:16:41</publishTime>
@@ -42,7 +48,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/27/2013 13:06:38</publishTime>
     </File>
     <File Include="bin/CO2Web.dll">
-      <publishTime>11/11/2013 16:18:23</publishTime>
+      <publishTime>11/14/2013 10:10:33</publishTime>
     </File>
     <File Include="bin/DotNetOpenAuth.AspNet.dll">
       <publishTime>08/27/2013 13:06:43</publishTime>
@@ -120,10 +126,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/27/2013 13:06:37</publishTime>
     </File>
     <File Include="CO2Web.csproj">
-      <publishTime>11/11/2013 16:18:20</publishTime>
+      <publishTime>11/14/2013 10:06:19</publishTime>
     </File>
     <File Include="CO2Web.csproj.user">
-      <publishTime>11/11/2013 16:18:20</publishTime>
+      <publishTime>11/14/2013 10:06:19</publishTime>
     </File>
     <File Include="Content/admin.css">
       <publishTime>09/12/2013 11:39:35</publishTime>
@@ -2268,7 +2274,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/28/2013 16:20:55</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>11/11/2013 16:19:42</publishTime>
+      <publishTime>11/14/2013 10:10:40</publishTime>
     </File>
     <File Include="Properties/AssemblyInfo.cs">
       <publishTime>08/27/2013 13:06:37</publishTime>
@@ -2283,7 +2289,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/11/2013 16:19:31</publishTime>
     </File>
     <File Include="Properties/PublishProfiles/edrive-git.pubxml.user">
-      <publishTime>11/11/2013 16:18:47</publishTime>
+      <publishTime>11/13/2013 15:23:53</publishTime>
     </File>
     <File Include="Scripts/admin.js">
       <publishTime>08/28/2013 16:17:38</publishTime>
@@ -2559,7 +2565,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/28/2013 16:16:51</publishTime>
     </File>
     <File Include="Templates/MasterPages/Admin.Master">
-      <publishTime>09/17/2013 13:23:50</publishTime>
+      <publishTime>11/12/2013 11:21:57</publishTime>
     </File>
     <File Include="Templates/MasterPages/Admin.Master.cs">
       <publishTime>08/27/2013 13:06:37</publishTime>
@@ -2580,7 +2586,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/03/2013 14:14:43</publishTime>
     </File>
     <File Include="Templates/Pages/Admin/LoginPage.aspx">
-      <publishTime>08/30/2013 10:08:53</publishTime>
+      <publishTime>11/12/2013 11:22:33</publishTime>
     </File>
     <File Include="Templates/Pages/Admin/LoginPage.aspx.cs">
       <publishTime>08/29/2013 11:28:13</publishTime>
@@ -2643,7 +2649,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/29/2013 11:50:56</publishTime>
     </File>
     <File Include="Templates/Pages/Admin/Upload.aspx">
-      <publishTime>09/17/2013 13:24:35</publishTime>
+      <publishTime>11/13/2013 15:23:12</publishTime>
     </File>
     <File Include="Templates/Pages/Admin/Upload.aspx.cs">
       <publishTime>09/05/2013 09:13:10</publishTime>
@@ -2985,7 +2991,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/27/2013 13:06:35</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/11/2013 16:19:33</publishTime>
+      <publishTime>11/13/2013 15:23:30</publishTime>
     </File>
     <File Include="Web.Debug.config">
       <publishTime>08/27/2013 13:06:37</publishTime>
