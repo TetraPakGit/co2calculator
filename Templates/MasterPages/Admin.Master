@@ -9,7 +9,7 @@
     <link href="/Content/admin.css" type="text/css" rel="stylesheet" />
     <link href="/scripts/fancybox/jquery.fancybox.css" type="text/css" rel="stylesheet" />
     <link href="/templates/pages/Styles/css/bootstrap.css" rel="stylesheet" />
-    <script type="text/javascript" src="/scripts/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="/scripts/fancybox/jquery.fancybox.pack.js"></script>
     <script type="text/javascript" src="/scripts/DataTables-1.9.4/media/js/jquery.datatables.min.js"></script>
     <script type="text/javascript" src="/scripts/jquery.jeditable.mini.js"></script>
