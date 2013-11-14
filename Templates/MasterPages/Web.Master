@@ -9,7 +9,7 @@
     <script type="text/javascript" src="/scripts/co2.js"></script>
     -->
     <!-- jQuery -->
-    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="/scripts/jquery-1.10.2.min.js"></script>
     <script src="/Templates/Styles/js/jquery.cookie.js"></script>
     <script src="/Templates/Styles/js/jquery.columnizer.js"></script>
     <!-- /jQuery -->
