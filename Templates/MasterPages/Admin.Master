@@ -25,7 +25,7 @@
                 <div class="ip">
                 <% if (Page.User.Identity.IsAuthenticated) { %>
                 <div class="topmenu">
-                    <a href="Translations.aspx">Labels</a> <a href="Upload.aspx">Images</a> <a href="Products.aspx">Produkter</a>
+                    <a href="Translations.aspx"><%= Translate("Labels", "Admin") %></a> <a href="Upload.aspx"><%= Translate("Images", "Admin") %></a> <a href="Products.aspx"><%= Translate("Products", "Admin") %></a> <a href="UploadCSV.aspx"><%= Translate("UploadCsv", "Admin") %></a>
                 </div>
                 <% } %>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -34,6 +34,10 @@
                 </div>
             </div>
         </div>
+        <script>
+            <%= Translate("GACode", "Google Analytics") %>
+        </script>
+        
     </form>
 </body>
 </html>

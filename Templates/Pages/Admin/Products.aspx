@@ -2,16 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script type="text/javascript">
         $(document).ready(function () {
-            var aaData = <%= GetDataJson() %>;
-            var aoColumns = <%= GetColumnsJson() %>;
-            var t = $('table#productsdisplay').dataTable({
-                'aaData': aaData,
-                'aoColumns': aoColumns,
-                'aoColumnDefs': [<%= GetColumnDefsJson() %>],
-                'fnDrawCallback': function () { wireEditable(this) }
-            });
-
-            wireEditable(t);
+            Load();
             //$('table#productsdisplay tr').on('click', function (event) {
             //    var aData = t.fnGetData( this );
             //    var id = aData[0];
@@ -37,11 +28,30 @@
             //});
         });
 
-        function wireEditable(table)
+        function Load() 
         {
+
+            var aaData = <%= GetDataJson() %>;
+            var aoColumns = <%= GetColumnsJson() %>;
+            var t = $('table#productsdisplay').dataTable({
+                'aaData': aaData,
+                'aoColumns': aoColumns,
+                'aoColumnDefs': [<%= GetColumnDefsJson() %>],
+                'fnDrawCallback': function () { wireEditable(this) }
+            });
+
+            wireEditable(t);
+        }
+
+        function wireEditable(table) {
             $('table#productsdisplay tr').on('click', function (event) {
                 var aData = table.fnGetData( this );
-                var id = aData[0];
+                
+                var aPos = table.fnGetPosition( this );
+                
+                // Get the data array for this row
+
+                var id = aPos;
                 editProduct(id);
             });
         }
@@ -49,26 +59,28 @@
         function deleteProduct()
         {
             var row = $('#productseditor input[name=row_id]').val();
-
             if (confirm('Are you sure you want to delete this product? This can\'t be undone'))
             {
                 $.get('productsdelete.aspx?id=' + row, null, function() {
                     var table =  $('table#productsdisplay').dataTable();
-                    table.fnDeleteRow(row);
+                    table.fnDeleteRow(row, null, true);
                     alert('<%= Translate("ProductDeleted", "Admin") %>');
+
                 });
+
             }
+            
         }
 
         function saveProduct()
         {
             var data = $('#productseditor input').serialize();
             var table =  $('table#productsdisplay').dataTable();
+
             $.post('productssave.aspx', data, function(result) {
                 var row = $('#productseditor input[name=row_id]').val(); // find row to update
 
-                if (row)
-                {
+                if (row) {
                     $('#productseditor input').each(function(idx,elm) {
                         if (elm.name.substring(0, 5) == 'field')
                             table.fnUpdate($(elm).val(), row, elm.name.split('_')[1], false, false); // update table
@@ -80,11 +92,16 @@
                 }
 
                 //table.fnDraw();
+                
                 alert('<%= Translate("ProductSaved", "Admin") %>');
             });
+
         }
 
         function editProduct(id) {
+            
+            
+
             var url = 'productsedit.aspx' + (id ? '?id=' + id : '');
             $.get(url, null, function (response) {
                 $.fancybox('<div id="productseditor">' + response + '</div>', { width: 960, height: 400 });
@@ -115,5 +132,6 @@
         <table id="productsdisplay">
         </table>
         <button onclick="editProduct(); return false"><%= Translate("AddProduct", "Admin") %></button>
+        <asp:HiddenField ID="DeleteIndex" runat="server" />
     </div>
 </asp:Content>

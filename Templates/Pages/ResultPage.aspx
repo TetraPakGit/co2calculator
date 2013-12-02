@@ -50,8 +50,9 @@
                                     <%= CurrentNode.ConcatTitle() %><br />
                                     <%= Translate("Volume","Details summary") %>: <%= CurrentNode.Data[2] %> ml<br />
                                     <%= Translate("Opening","Details summary") %>: <%= CurrentNode.Data[3] %><br />
-                                    <%= Translate("Package weight","Details summary") %>: <%= Round(CurrentNode.Data[58]) %>g<br />
-                                    <%= Translate("Total weight","Details summary") %>: <%= Round(CurrentNode.Data[63]) %>g
+                                    <%= Translate("Package weight","Details summary") %>: <%= CurrentNode.SleevePlusTopWeight  %>g<br />
+                                   <asp:PlaceHolder runat="server" ID="CapOpeningPlaceHolder"> <%= Translate("CapOpening","Details summary") %>: <%= CurrentNode.CapOpeningWeight  %>g<br /></asp:PlaceHolder>
+                                    <%= Translate("Total weight","Details summary") %>: <%= CurrentNode.TotalWeight  %>g
                                 </div>
                             </div>
                         </div>
@@ -200,5 +201,7 @@
                 </div><!--/.span12-->
             </div><!--/.row-->
         </div><!--/.container-->
+        
+<%--        <%= CurrentNode.PaperWeight %>|<%= CurrentNode.AluminiumWeight %>|<%= CurrentNode.PlasticWeight %>|<%= CurrentNode.BiobasedWeight %>--%>
     </div><!--/#content-->
 </asp:Content>
