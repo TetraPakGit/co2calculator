@@ -6,9 +6,13 @@
         <h2><%= Translate("UploadCSV", "Admin") %></h2>
         <div class="admin">
             <asp:FileUpload ID="CSVUpload" runat="server" />
-            <asp:Button ID="CSVUploadButton" runat="server" Text="Upload Image" OnClick="CSVButtonUpload_Click" />
+            <asp:Button ID="CSVUploadButton" runat="server" Text="Upload Image" OnClick="CSVButtonUpload_Click" />&nbsp;<%= Translate("UploadCSVInfo", "Admin") %>
             <br/>
             <asp:Literal runat="server" ID="StatusLiteral"></asp:Literal>
+        </div>
+        <h3><%= Translate("DownloadCSV", "Admin") %></h3>
+        <div class="admin">
+            <asp:Button ID="DownloadButton" runat="server" OnClick="DownloadButton_Click"/>
         </div>
     </div>
 

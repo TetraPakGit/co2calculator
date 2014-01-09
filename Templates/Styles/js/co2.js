@@ -57,7 +57,12 @@ function slideCurtain() {
     $('#curtain .curtain-header, #curtain-arrow').click(function () {
         if (!$('#curtain .curtain-header h2').hasClass('no-click')) {
             $('#curtain .curtain-text').slideToggle(function () {
-                $('#curtain .close-curtain').fadeToggle();
+                $('#curtain .close-curtain').fadeToggle(function () {
+                    if ($('#curtain .close-curtain').css('display') == 'block') {
+                        $('#curtain .open-curtain').css('display', 'none');
+                    }
+                });
+                $('#curtain .open-curtain').fadeToggle();
                 $('#curtain-arrow').toggle();
                 /*$.cookie("curtain", "1", { expires: 365 });*/
             });

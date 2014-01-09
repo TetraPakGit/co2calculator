@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Templates/MasterPages/Web.Master" AutoEventWireup="true" CodeBehind="ResultPage.aspx.cs" Inherits="CO2Web.Templates.Pages.ResultPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -10,6 +11,7 @@
                     <div class="span12">
                         <h2><%= Translate("HeaderTitle", "Calculator") %></h2>
                         <a href="#" class="close-curtain" title="Close"></a>
+                        <a href="#" class="open-curtain" title="Open">More info</a>
                     </div><!--/.span12-->
                 </div><!--/.row-->
                 <div class="row curtain-text">
@@ -28,6 +30,11 @@
 
     <div id="content">
         <div class="container">
+            <div class="row print-row">
+                <div class="span12">
+                    <img src="/Templates/Styles/img/STAMP_RGB_EN_small.png" alt="" />
+                </div>
+            </div>
             <div class="row">
                 <div class="span12">
                     <div id="page-header">
@@ -72,17 +79,10 @@
                     <div id="tab1" class="nav-tabs-content row-fluid">
                         <div class="span12 diagram">
                             <div class="ip">
-                                <h1 class="print-header"><%= Translate("HeaderTitle","PackageGraph") %></h1>
-                                <h2><%= Translate("SubTitle","PackageGraph") %></h2>
                                 <div class="row-fluid">
-                                    <div class="span3"><%= Translate("RawMaterialForPackageAndOpening","PackageGraph") %>*</div>
-                                    <div class="span2"><img src="/Templates/Styles/img/result_circle1.png" alt=""/></div>
-                                    <div class="span7">
-                                        <div class="graph-container">
-                                            <div class="graph graph1" style="width:<%= Percent(CurrentNode.GetGWPRaw(), 140) %>%;">
-                                                <img src="/Templates/Styles/img/graph1.gif" alt=""/>
-                                            </div>
-                                        </div>
+                                    <div class="span7 offset5">
+                                        <h1 class="print-header"><%= Translate("HeaderTitle","PackageGraph") %></h1>
+                                        <h2><%= Translate("SubTitle","PackageGraph") %></h2>
                                     </div>
                                 </div>
                                 <div class="row-fluid">
@@ -99,12 +99,75 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row-fluid row-bottom row-colors">
+                                <div class="row-fluid row-colors">
                                     <div class="span5">* <%= Translate("IncludingTransports","PackageGraph") %></div>
                                     <div class="span7">
                                         <p><img src="/Templates/Styles/img/graph1.gif" alt="" /><%= CurrentNode.GetGWPRaw() %>g <%= Translate("RawMaterial","PackageGraph") %></p>
                                         <p><img src="/Templates/Styles/img/graph2.gif" alt="" /><%= CurrentNode.GetGWPConv() %>g <%= Translate("ConvertingTopMoulding","PackageGraph") %></p>
                                         <p><em><%= Translate("ResultsToNearestGram","PackageGraph") %></em></p>
+                                    </div>
+                                </div>
+                                <div class="row-fluid pagebreakbeforeprint">
+                                    <div class="span7 offset5">
+                                        <h2><%= Translate("Materials/package","PackageChart") %></h2>
+                                    </div>
+                                </div>
+                                <div class="row-fluid  row-bottom">
+                                    <div class="span4"><%= Translate("RawMaterialConvertingPackageOpening","PackageGraph") %>*</div>
+                                    <div class="span8">
+                                        <script type="text/javascript">
+                                            // Load the Visualization API and the piechart package.
+                                            google.load('visualization', '1.0', { 'packages': ['corechart'] });
+
+                                            // Set a callback to run when the Google Visualization API is loaded.
+                                            google.setOnLoadCallback(drawChart);
+
+                                            // Callback that creates and populates a data table, 
+                                            // instantiates the pie chart, passes in the data and
+                                            // draws it.
+                                            function drawChart() {
+
+                                                // Create the data table.
+                                                var data = new google.visualization.DataTable();
+                                                data.addColumn('string', 'Materials');
+                                                data.addColumn('number', 'Weight');
+                                                data.addRows([
+                                                  ['<%= Translate("Paper","PackageChart") %>', <%= CurrentNode.PaperWeight %>],
+                                                  ['<%= Translate("Aluminium","PackageChart") %>', <%= CurrentNode.AluminiumWeight %>],
+                                                  ['<%= Translate("Plastic","PackageChart") %>', <%= CurrentNode.PlasticWeight %>],
+                                                  ['<%= Translate("BioBasedWeight","PackageChart") %>', <%= CurrentNode.BiobasedWeight %>]
+                                                ]);
+                                                //<%= CurrentNode.PaperWeight %>|<%= CurrentNode.AluminiumWeight %>|<%= CurrentNode.PlasticWeight %>|<%= CurrentNode.BiobasedWeight %>
+
+                                                var formatter = new google.visualization.NumberFormat({
+                                                    fractionDigits: 0,
+                                                    suffix: ' g'
+                                                });
+
+                                                formatter.format(data, 1); // Apply formatter to second column.
+
+                                                // Set chart options
+                                                var options = {
+                                                    'width': 300,
+                                                    'height': 150,
+                                                    'backgroundColor': 'transparent',
+                                                    'colors': ['#0a79c0', '#f07223', '#008443', '#882500'],
+                                                    'chartArea': {left:70,top:10,width:"100%",height:"90%"},
+                                                    'legend': { position: 'right', alignment: 'center' }
+                                                };
+
+                                                // Instantiate and draw our chart, passing in some options.
+                                                var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+
+                                                /*chart.setAction({
+                                                    id: 'sample',                  // An id is mandatory for all actions.
+                                                    text: 'Enhet: gram',       // The text displayed in the tooltip.
+                                                });*/
+
+                                                chart.draw(data, options);
+                                            }
+                                        </script>
+                                        <div id="chart_div" style="width:300px; height:150px;"></div>
                                     </div>
                                 </div>
                                 <div class="row-fluid row-bottom print-row">
@@ -180,7 +243,7 @@
                         <div class="span12">
                             <div class="ip">
                                 <h1 class="print-header"><%= Translate("HeaderTitle","Facts") %></h1>
-                                <img src="http://www.tetrapak.com/_layouts/images/TetraPak.CO2Calculator/TV.jpg" class="float-right" alt=""/>
+                                <img src="/Templates/Styles/img/TV.jpg" class="float-right" alt=""/>
                                 <ol>
                                     <li><%= Translate("WatchingTVDescription","Facts") %> <%= Math.Round(109f / CurrentNode.GetGWPTotal()) %> <%= CurrentNode.ConcatTitleWithPerforation() %> *</li>
                                     <li><%= Translate("DrivingCarDescription","Facts") %> <%= Math.Round(158f / CurrentNode.GetGWPTotal()) %> <%= CurrentNode.ConcatTitleWithPerforation() %> **</li>
@@ -202,6 +265,6 @@
             </div><!--/.row-->
         </div><!--/.container-->
         
-<%--        <%= CurrentNode.PaperWeight %>|<%= CurrentNode.AluminiumWeight %>|<%= CurrentNode.PlasticWeight %>|<%= CurrentNode.BiobasedWeight %>--%>
+        
     </div><!--/#content-->
 </asp:Content>

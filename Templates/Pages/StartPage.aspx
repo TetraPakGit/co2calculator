@@ -9,6 +9,7 @@
                     <div class="span12">
                         <h2 class="no-click">Calculating CO2 for a Tetra Pak Carton</h2>
                         <a href="#" class="close-curtain" title="Close"></a>
+                        <a href="#" class="open-curtain" title="Open">More info</a>
                     </div><!--/.span12-->
                 </div><!--/.row-->
                 <div class="row curtain-text">

@@ -50,13 +50,26 @@ a:focus {
     color:#fff;
     text-align:center;
 }
-#curtain .close-curtain {
+#curtain .close-curtain,
+#curtain .open-curtain {
     position:absolute;
     top:10px;
-    right:10px;
+    right:30px;
     width:24px;
     height:24px;
     background:url(/Templates/Styles/img/x.png) center center no-repeat;
+}
+#curtain .open-curtain {
+    right:auto;
+    left:50%;
+    display:block;
+    width:auto;
+    padding:0 10px;
+    background:url(/Templates/Styles/img/open.gif) center top no-repeat;
+    text-decoration:none;
+    color:#2E7731;
+    margin-left:200px;
+    white-space:nowrap;
 }
 #curtain .row.curtain-text,
 #curtain .row.curtain-text * {
@@ -107,7 +120,8 @@ body.startpage {
     color:#000;
 }
 .curtain-start-page #curtain-arrow,
-.curtain-start-page #curtain .close-curtain {
+.curtain-start-page #curtain .close-curtain,
+.curtain-start-page #curtain .open-curtain {
     display:none !important;
 }
 .curtain-start-page #curtain .curtain-text {
@@ -193,6 +207,9 @@ body.startpage {
 .flex-caption {
     text-align:center;
 }
+#slider .flex-caption {
+    display:none;
+}
 .flexslider img {
     margin:0 auto;
 }
@@ -207,7 +224,7 @@ body.startpage {
 }
 /*big*/
 #content #slider .btn-container {
-    margin-top:-20%;
+    margin-top:-13%;
     margin-bottom:14%;
 
 }
@@ -359,7 +376,7 @@ body.startpage {
 /*/tabs*/
 /*diagram*/
 .diagram h2 {
-    text-align:center;
+    /*text-align:center;*/
     margin: 0 0 20px;
 }
 .diagram .row-fluid {
@@ -395,6 +412,9 @@ body.startpage {
 .diagram em {
     font-size:small;
     line-height:15px;
+}
+.diagram .print-row {
+    padding-top:20px;
 }
 /*/diagram*/
 /*print*/
@@ -497,6 +517,9 @@ body.startpage {
         float:none;
         margin:0 auto;
     }
+    #curtain .open-curtain {
+        display:none !important;
+    }
 }
 /* /special for result header */
 @media screen and (max-width: 480px) { /*small mobile*/
@@ -508,6 +531,9 @@ body.startpage {
 @media print { /*print*/
     a[href]:after {
         content: "";
+    }
+    .pagebreakbeforeprint {
+        page-break-before:always
     }
     .result-header {
         height:auto;
@@ -568,6 +594,11 @@ body.startpage {
     }
     #tab1 .print-header {
         margin-top:0;
+    }
+    .diagram .span4 {
+        display:block;
+        float:none;
+        clear:both;
     }
 }
 /***************************************** /responsive *****************************************/

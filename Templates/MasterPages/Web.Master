@@ -4,6 +4,7 @@
 <head runat="server">
     <title>Tetra Pak C02 Calculator</title>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!--
     <script type="text/javascript" src="/scripts/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="/scripts/co2.js"></script>
@@ -45,5 +46,8 @@
         </asp:ContentPlaceHolder>
     </div>
     </form>
+    <script>
+        <%= Translate("GACode", "Google Analytics") %>
+    </script>
 </body>
 </html>

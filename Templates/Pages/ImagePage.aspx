@@ -10,8 +10,9 @@
             <div class="container">
                 <div class="row curtain-header">
                     <div class="span12">
-                        <h2>Calculating CO2 for a Tetra Pak Carton</h2>
+                        <h2><%= Translate("HeaderTitle", "Calculator") %></h2>
                         <a href="#" class="close-curtain" title="Close"></a>
+                        <a href="#" class="open-curtain" title="Open"><%= Translate("MoreInfo", "Calculator") %></a>
                     </div><!--/.span12-->
                 </div><!--/.row-->
                 <div class="row curtain-text">
