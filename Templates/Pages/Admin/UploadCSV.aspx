@@ -10,7 +10,7 @@
             <br/>
             <asp:Literal runat="server" ID="StatusLiteral"></asp:Literal>
         </div>
-        <h3><%= Translate("DownloadCSV", "Admin") %></h3>
+        <h2><%= Translate("DownloadCSV", "Admin") %></h2>
         <div class="admin">
             <asp:Button ID="DownloadButton" runat="server" OnClick="DownloadButton_Click"/>
         </div>
