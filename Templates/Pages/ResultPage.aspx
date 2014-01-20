@@ -113,7 +113,7 @@
                                     </div>
                                 </div>
                                 <div class="row-fluid  row-bottom">
-                                    <div class="span4"><%= Translate("RawMaterialConvertingPackageOpening","PackageGraph") %>*</div>
+                                    <div class="span4">&nbsp;</div>
                                     <div class="span8">
                                         <script type="text/javascript">
                                             // Load the Visualization API and the piechart package.

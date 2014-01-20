@@ -64,12 +64,10 @@
                 $.get('productsdelete.aspx?id=' + row, null, function() {
                     var table =  $('table#productsdisplay').dataTable();
                     table.fnDeleteRow(row, null, true);
+                    $.fancybox.close()
                     alert('<%= Translate("ProductDeleted", "Admin") %>');
-
                 });
-
             }
-            
         }
 
         function saveProduct()
@@ -99,10 +97,8 @@
         }
 
         function editProduct(id) {
-            
-            
-
-            var url = 'productsedit.aspx' + (id ? '?id=' + id : '');
+            var rdn = 1000000 + Math.floor(Math.random() * 40000000);
+            var url = 'productsedit.aspx?id=' + id + '&rnd=';
             $.get(url, null, function (response) {
                 $.fancybox('<div id="productseditor">' + response + '</div>', { width: 960, height: 400 });
             });
